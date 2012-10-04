@@ -1,6 +1,5 @@
 package me.joshua.webx.springext.contribution.firststep.demo;
 
-import me.joshua.webx.springext.contribution.firststep.demo.echo.Decorator;
 
 public class EchoServiceImpl implements EchoService {
 
@@ -8,19 +7,13 @@ public class EchoServiceImpl implements EchoService {
 	private String preTitle;
 	private String postTitle;
 	private String separator;
-	private Decorator decorator;
 
 	@Override
 	public String echo(String message) {
 		StringBuilder sb = new StringBuilder();
 
 		sb.append(preTitle).append(title).append(postTitle).append(separator)
-				.append(' ');
-		if (null != decorator) {
-			sb.append(decorator.decorate(message));
-		} else {
-			sb.append(message);
-		}
+				.append(' ').append(message);
 
 		return sb.toString();
 	}
@@ -43,11 +36,6 @@ public class EchoServiceImpl implements EchoService {
 	@Override
 	public void setSeparator(String separator) {
 		this.separator = separator;
-	}
-
-	@Override
-	public void setDecorator(Decorator decorator) {
-		this.decorator = decorator;
 	}
 
 }

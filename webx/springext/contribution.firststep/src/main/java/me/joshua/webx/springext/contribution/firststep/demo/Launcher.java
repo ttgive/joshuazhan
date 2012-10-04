@@ -10,22 +10,10 @@ public class Launcher {
 	private final static String LINE_SEPARATOR = "============================";
 	private final static String GREETING_MESSAGE = "Hello World!";
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		ApplicationContext context = new XmlApplicationContext(
 				new ClassPathResource("configuration.xml"));
-		testEchoBean(context);
 		testEchoService(context);
-	}
-
-	public static void testEchoBean(ApplicationContext context) {
-		EchoBean echoBean = (EchoBean) context.getBean("echoBean");
-		System.out.println();
-		System.out.println(LINE_SEPARATOR);
-		System.out.println(echoBean.echo(GREETING_MESSAGE));
-		System.out.println(LINE_SEPARATOR);
 	}
 
 	public static void testEchoService(ApplicationContext context) {
