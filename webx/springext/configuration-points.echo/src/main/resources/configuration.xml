@@ -11,7 +11,7 @@
 
 	<echo-service xmlns="http://www.alibaba.com/schema/services">
 		<title>Echo</title>
-		<es-decorators:uppercase />
+		<es-decorators:decorator class="me.joshua.webx.springext.configurationpoints.echo.decorator.SmileDecorator" />
 <!-- 
 		<es-decorators:decorator class="me.joshua.webx.springext.configurationpoints.echo.decorator.SmileDecorator" />
 		<es-decorators:lowercase />
