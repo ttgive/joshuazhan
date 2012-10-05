@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
 	定义echo-service元素的格式
-	包括一个title子元素和preTitle， postTitle，separator三个属性
+	包括一个title子元素和preTitle， postTitle，separator三个属性，所有的元素和属性都是可选的，且提供了默认值
  -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:springext="http://www.alibaba.com/schema/springext/base" elementFormDefault="qualified"
@@ -13,12 +13,12 @@
 	<xsd:element name="echo-service" type="EchoServiceType" />
 
 	<xsd:complexType name="EchoServiceType">
-		<xsd:choice minOccurs="1" maxOccurs="1">
+		<xsd:choice minOccurs="0" maxOccurs="1">
 			<xsd:element name="title" type="xsd:string" default="Echo"/>
 		</xsd:choice>
-		<xsd:attribute name="preTitle" default="[" type="xsd:string" />
-		<xsd:attribute name="postTitle" default="]" type="xsd:string" />
-		<xsd:attribute name="separator" default=":" type="xsd:string" />
+		<xsd:attribute name="preTitle" type="xsd:string" default="[" />
+		<xsd:attribute name="postTitle" type="xsd:string" default="]" />
+		<xsd:attribute name="separator" type="xsd:string" default=":" />
 	</xsd:complexType>
 
 </xsd:schema>
