@@ -2,6 +2,9 @@ package me.joshua.webx.springext.configurationpoints.echo;
 
 import me.joshua.webx.springext.configurationpoints.echo.decorator.Decorator;
 
+/**
+ * @author <a href="mailto:daonan.zhan@gmail.com">Joshua Zhan</a> 2012-10-5
+ */
 public class EchoServiceImpl implements EchoService {
 
 	private String title;

@@ -14,6 +14,8 @@ import com.alibaba.citrus.springext.support.parser.AbstractNamedBeanDefinitionPa
  * EchoServiceImpl回显的内容示例如下：<br>
  * <code>"[Echo]: XXXX"</code><br>
  * 其中"["为preTitle，"Echo"为title，"]"为postTitle，":"为separator，"XXXX"则是消息内容
+ * 
+ * @author <a href="mailto:daonan.zhan@gmail.com">Joshua Zhan</a> 2012-10-5
  */
 public class EchoServiceImpl implements EchoService {
 
