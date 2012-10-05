@@ -1,4 +1,4 @@
-package me.joshua.webx.springext.contribution.firststep.demo;
+package me.joshua.webx.springext.contribution.echo;
 
 /**
  * @author <a href="mailto:daonan.zhan@gmail.com">Joshua Zhan</a>
