@@ -1,6 +1,20 @@
 package me.joshua.webx.springext.contribution.firststep.demo;
 
+import static com.alibaba.citrus.springext.util.DomUtil.sameNs;
+import static com.alibaba.citrus.springext.util.SpringExtUtil.attributesToProperties;
+import static com.alibaba.citrus.springext.util.SpringExtUtil.subElementsToProperties;
 
+import org.springframework.beans.factory.support.BeanDefinitionBuilder;
+import org.springframework.beans.factory.xml.ParserContext;
+import org.w3c.dom.Element;
+
+import com.alibaba.citrus.springext.support.parser.AbstractNamedBeanDefinitionParser;
+
+/**
+ * EchoServiceImpl回响的内容示例如下：<br>
+ * <code>"[Echo]: XXXX"</code><br>
+ * 其中"["为preTitle，"Echo"为title，"]"为postTitle，":"为separator，"XXXX"则是消息内容
+ */
 public class EchoServiceImpl implements EchoService {
 
 	private String title;
@@ -36,6 +50,27 @@ public class EchoServiceImpl implements EchoService {
 	@Override
 	public void setSeparator(String separator) {
 		this.separator = separator;
+	}
+
+	/**
+	 * 用于解析Echo Service的XML配置，生成对应的Bean Definition
+	 */
+	public static class DefinitionParser extends
+			AbstractNamedBeanDefinitionParser<EchoServiceImpl> {
+
+		@Override
+		protected void doParse(Element element, ParserContext parserContext,
+				BeanDefinitionBuilder builder) {
+			// 调用工具类SpringExtUtil中的方法，分别把子元素和属性值设置到EchoService中
+			subElementsToProperties(element, builder, sameNs(element));
+			attributesToProperties(element, builder, "preTitle", "postTitle",
+					"separator");
+		}
+
+		@Override
+		protected String getDefaultName() {
+			return EchoService.DEFAULT_NAME;
+		}
 	}
 
 }

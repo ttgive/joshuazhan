@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	定义echo-service元素的格式
+	包括一个title子元素和preTitle， postTitle，separator三个属性
+ -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:springext="http://www.alibaba.com/schema/springext/base" elementFormDefault="qualified"
 >
