@@ -1,4 +1,4 @@
-package me.joshua.webx.springext.demo.echo;
+package me.joshua.webx.springext.configurationpoints.echo.decorator;
 
 import com.alibaba.citrus.springext.support.parser.AbstractSingleBeanDefinitionParser;
 

@@ -1,1 +1,1 @@
-echo-service=me.joshua.webx.springext.demo.EchoServiceDefinitionParser
+echo-service=me.joshua.webx.springext.configurationpoints.echo.EchoServiceDefinitionParser

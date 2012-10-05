@@ -1,4 +1,4 @@
-package me.joshua.webx.springext.demo;
+package me.joshua.webx.springext.configurationpoints.echo;
 
 import static com.alibaba.citrus.springext.util.DomUtil.ns;
 import static com.alibaba.citrus.springext.util.DomUtil.sameNs;

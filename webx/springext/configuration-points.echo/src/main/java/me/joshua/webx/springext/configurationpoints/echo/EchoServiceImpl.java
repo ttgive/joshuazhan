@@ -1,6 +1,6 @@
-package me.joshua.webx.springext.demo;
+package me.joshua.webx.springext.configurationpoints.echo;
 
-import me.joshua.webx.springext.demo.echo.Decorator;
+import me.joshua.webx.springext.configurationpoints.echo.decorator.Decorator;
 
 public class EchoServiceImpl implements EchoService {
 

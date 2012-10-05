@@ -1,2 +1,2 @@
-uppercase=me.joshua.webx.springext.demo.echo.UpperCaseDecorator$DefinitionParser
-lowercase=me.joshua.webx.springext.demo.echo.LowerCaseDecorator$DefinitionParser
+uppercase=me.joshua.webx.springext.configurationpoints.echo.decorator.UpperCaseDecorator$DefinitionParser
+lowercase=me.joshua.webx.springext.configurationpoints.echo.decorator.LowerCaseDecorator$DefinitionParser
