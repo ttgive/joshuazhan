@@ -10,9 +10,10 @@
 	<xsd:element name="echo-service" type="EchoServiceType" />
 
 	<xsd:complexType name="EchoServiceType">
-		<xsd:choice minOccurs="0" maxOccurs="1">
+		<xsd:sequence>
 			<xsd:element name="title" type="xsd:string" default="Echo" />
-		</xsd:choice>
+			<xsd:any namespace="http://www.alibaba.com/schema/services/echo-service/decorators" minOccurs="0" />
+		</xsd:sequence>
 		<xsd:attribute name="preTitle" type="xsd:string" default="[" />
 		<xsd:attribute name="postTitle" type="xsd:string" default="]" />
 		<xsd:attribute name="separator" type="xsd:string" default=":" />
