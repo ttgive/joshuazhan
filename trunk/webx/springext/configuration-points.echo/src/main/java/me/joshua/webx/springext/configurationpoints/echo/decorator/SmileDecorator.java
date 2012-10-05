@@ -1,4 +1,4 @@
-package me.joshua.webx.springext.demo.echo;
+package me.joshua.webx.springext.configurationpoints.echo.decorator;
 
 public class SmileDecorator implements Decorator {
 	private static final String SMILE_STRING = " :-)";

@@ -1,4 +1,4 @@
-package me.joshua.webx.springext.demo;
+package me.joshua.webx.springext.configurationpoints.echo;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.ClassPathResource;
