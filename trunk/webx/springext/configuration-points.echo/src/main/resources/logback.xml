@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Logback Configuration. -->
 <configuration debug="false">
-	<appender
-		name="STDOUT"
-		class="ch.qos.logback.core.ConsoleAppender">
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<target>System.out</target>
 		<filter class="com.alibaba.citrus.logconfig.logback.LevelRangeFilter">
 			<levelMax>INFO</levelMax>
