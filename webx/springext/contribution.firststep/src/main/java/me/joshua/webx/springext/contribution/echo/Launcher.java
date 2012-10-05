@@ -1,4 +1,4 @@
-package me.joshua.webx.springext.contribution.firststep.demo;
+package me.joshua.webx.springext.contribution.echo;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.ClassPathResource;

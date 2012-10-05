@@ -1,4 +1,4 @@
-package me.joshua.webx.springext.contribution.firststep.demo;
+package me.joshua.webx.springext.contribution.echo;
 
 import static com.alibaba.citrus.springext.util.DomUtil.sameNs;
 import static com.alibaba.citrus.springext.util.SpringExtUtil.attributesToProperties;
