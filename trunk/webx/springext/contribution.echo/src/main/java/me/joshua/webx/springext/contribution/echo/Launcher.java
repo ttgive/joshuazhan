@@ -5,6 +5,11 @@ import org.springframework.core.io.ClassPathResource;
 
 import com.alibaba.citrus.springext.support.context.XmlApplicationContext;
 
+/**
+ * 运行示例的类
+ * 
+ * @author <a href="mailto:daonan.zhan@gmail.com">Joshua Zhan</a> 2012-10-5
+ */
 public class Launcher {
 
 	private final static String LINE_SEPARATOR = "============================";

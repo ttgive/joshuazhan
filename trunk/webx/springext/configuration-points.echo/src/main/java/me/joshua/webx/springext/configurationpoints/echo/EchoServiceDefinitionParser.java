@@ -18,6 +18,9 @@ import com.alibaba.citrus.springext.Contribution;
 import com.alibaba.citrus.springext.ContributionAware;
 import com.alibaba.citrus.springext.support.parser.AbstractNamedBeanDefinitionParser;
 
+/**
+ * @author <a href="mailto:daonan.zhan@gmail.com">Joshua Zhan</a> 2012-10-5
+ */
 public class EchoServiceDefinitionParser extends
 		AbstractNamedBeanDefinitionParser<EchoServiceImpl> implements
 		ContributionAware {
