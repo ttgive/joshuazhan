@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Logback Configuration. -->
+<configuration debug="false">
+	<appender
+		name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<target>System.out</target>
+		<filter class="com.alibaba.citrus.logconfig.logback.LevelRangeFilter">
+			<levelMax>INFO</levelMax>
+		</filter>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} : %p [%c] [%t] %m%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
