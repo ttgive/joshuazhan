@@ -1,1 +1,2 @@
-echo-service=me.joshua.webx.springext.contribution.firststep.demo.EchoServiceDefinitionParser
+# Services命名空间下echo-service元素的解析器
+echo-service=me.joshua.webx.springext.contribution.firststep.demo.EchoServiceImpl$DefinitionParser
