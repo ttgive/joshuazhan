@@ -6,5 +6,6 @@
 		http://www.springframework.org/schema/beans http://localhost:8080/schema/www.springframework.org/schema/beans/spring-beans.xsd"
 >
 	<echo-service xmlns="http://www.alibaba.com/schema/services">
+		<title>Echo</title>
 	</echo-service>
 </beans>
