@@ -11,7 +11,7 @@ import org.w3c.dom.Element;
 import com.alibaba.citrus.springext.support.parser.AbstractNamedBeanDefinitionParser;
 
 /**
- * EchoServiceImpl回响的内容示例如下：<br>
+ * EchoServiceImpl回显的内容示例如下：<br>
  * <code>"[Echo]: XXXX"</code><br>
  * 其中"["为preTitle，"Echo"为title，"]"为postTitle，":"为separator，"XXXX"则是消息内容
  */
