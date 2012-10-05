@@ -3,18 +3,13 @@
 	定义echo-service元素的格式
 	包括一个title子元素和preTitle， postTitle，separator三个属性，所有的元素和属性都是可选的，且提供了默认值
  -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:beans="http://www.springframework.org/schema/beans"
-	xmlns:springext="http://www.alibaba.com/schema/springext/base" elementFormDefault="qualified"
->
-
-	<xsd:import namespace="http://www.springframework.org/schema/beans" schemaLocation="http://localhost:8080/schema/www.springframework.org/schema/beans/spring-beans.xsd" />
-	<xsd:import namespace="http://www.alibaba.com/schema/springext/base" schemaLocation="http://localhost:8080/schema/www.alibaba.com/schema/springext/springext-base.xsd" />
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
 	<xsd:element name="echo-service" type="EchoServiceType" />
 
 	<xsd:complexType name="EchoServiceType">
 		<xsd:choice minOccurs="0" maxOccurs="1">
-			<xsd:element name="title" type="xsd:string" default="Echo"/>
+			<xsd:element name="title" type="xsd:string" default="Echo" />
 		</xsd:choice>
 		<xsd:attribute name="preTitle" type="xsd:string" default="[" />
 		<xsd:attribute name="postTitle" type="xsd:string" default="]" />
