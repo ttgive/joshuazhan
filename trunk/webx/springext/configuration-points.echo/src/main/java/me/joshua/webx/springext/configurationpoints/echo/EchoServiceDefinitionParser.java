@@ -37,6 +37,9 @@ public class EchoServiceDefinitionParser extends
 		parseDecorators(element, parserContext, builder);
 	}
 
+	/**
+	 * 解析回显服务的消息修饰器配置，如果存在就生成对应的修饰器Bean定义
+	 */
 	private void parseDecorators(Element element, ParserContext parserContext,
 			BeanDefinitionBuilder builder) {
 		Element decoratorElement = theOnlySubElement(element,
