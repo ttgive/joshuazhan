@@ -9,7 +9,7 @@ public class SmileDecorator implements Decorator {
 	private static final String SMILE_STRING = " :-)";
 
 	@Override
-	public String decorate(String s) {
-		return s + SMILE_STRING;
+	public String decorate(String message) {
+		return message + SMILE_STRING;
 	}
 }

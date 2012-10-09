@@ -8,10 +8,10 @@ package me.joshua.webx.springext.configurationpoints.echo.decorator;
 public interface Decorator {
 	
 	/**
-	 * 对传入的字符串进行修饰
+	 * 对传入的消息字符串进行修饰
 	 * 
-	 * @param s, 传入的字符串
+	 * @param message, 传入的字符串
 	 * @return 修饰后的字符串
 	 */
-	public String decorate(String s);
+	public String decorate(String message);
 }

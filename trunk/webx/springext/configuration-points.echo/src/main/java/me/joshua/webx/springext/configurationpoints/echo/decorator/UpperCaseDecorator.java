@@ -10,8 +10,8 @@ import com.alibaba.citrus.springext.support.parser.AbstractSingleBeanDefinitionP
 public class UpperCaseDecorator implements Decorator {
 
 	@Override
-	public String decorate(String s) {
-		return s.toUpperCase();
+	public String decorate(String message) {
+		return message.toUpperCase();
 	}
 
 	public static class DefinitionParser extends
