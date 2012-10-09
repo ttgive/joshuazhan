@@ -10,8 +10,8 @@ import com.alibaba.citrus.springext.support.parser.AbstractSingleBeanDefinitionP
 public class LowerCaseDecorator implements Decorator {
 
 	@Override
-	public String decorate(String in) {
-		return in.toLowerCase();
+	public String decorate(String s) {
+		return s.toLowerCase();
 	}
 
 	public static class DefinitionParser extends
