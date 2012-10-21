@@ -34,26 +34,31 @@ public class EchoServiceDefinitionParser extends
 		subElementsToProperties(element, builder, sameNs(element));
 		attributesToProperties(element, builder, "preTitle", "postTitle",
 				"separator");
-		parseDecorators(element, parserContext, builder);
+		parseDecorator(element, parserContext, builder);
 	}
 
 	/**
 	 * 解析回显服务的消息修饰器配置，如果存在就生成对应的修饰器Bean定义
 	 */
-	private void parseDecorators(Element element, ParserContext parserContext,
+	private void parseDecorator(Element element, ParserContext parserContext,
 			BeanDefinitionBuilder builder) {
+		// 获取唯一的Decorator子元素
 		Element decoratorElement = theOnlySubElement(element,
 				ns(DECORATOR_NAMESPACE));
 		if (null == decoratorElement) {
 			return;
 		}
+		
+		// 根据扩展点生成Decorator元素对应的BeanDefinition
 		BeanDefinitionHolder decoratorBean = parseConfigurationPointBean(
 				decoratorElement, decoratorsConfigurationPoint, parserContext, builder);
+		// 作为一个内部Bean设置到Echo Service的BeanDefinition中
 		builder.addPropertyValue("decorator", decoratorBean);
 	}
 
 	@Override
 	public void setContribution(Contribution contrib) {
+		// 获取Decorator扩展点实例
 		decoratorsConfigurationPoint = getSiblingConfigurationPoint(
 				"services/echo-service/decorators", contrib);
 	}

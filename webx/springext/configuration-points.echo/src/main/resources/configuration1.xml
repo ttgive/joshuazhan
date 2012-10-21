@@ -10,11 +10,12 @@
 
 	<echo-service xmlns="http://www.alibaba.com/schema/services">
 		<title>Echo</title>
-		<es-decorators:decorator class="me.joshua.webx.springext.configurationpoints.echo.decorator.SmileDecorator" />
-<!-- 
-		<es-decorators:decorator class="me.joshua.webx.springext.configurationpoints.echo.decorator.SmileDecorator" />
 		<es-decorators:lowercase />
-		<es-decorators:uppercase />
- -->
+		<!-- 
+			自定义标签式的扩展，可以自行替换lowercase和uppercase这两个标签进行尝试
+			<es-decorators:lowercase />
+			<es-decorators:uppercase />
+		 -->
 	</echo-service>
+	
 </beans>

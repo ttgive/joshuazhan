@@ -1,1 +1,1 @@
-services/echo-service/decorators=http://www.alibaba.com/schema/services/echo-service/decorators; defaultElement=decorator; nsPrefix=es-decorators
+services/echo-service/decorators=http://www.alibaba.com/schema/services/echo-service/decorators; defaultElement=decorator;
