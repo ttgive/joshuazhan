@@ -17,12 +17,17 @@ public class Launcher {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ApplicationContext context = new XmlApplicationContext(
-				new ClassPathResource("configuration.xml"));
-		testEchoService(context);
+		// 配置1为使用自定义扩展元素的示例
+		testEchoService("configuration1.xml");
+		// 配置2为使用默认元素的示例
+		testEchoService("configuration2.xml");
+		// 配置3为在默认元素中引用Bean的示例
+		testEchoService("configuration3.xml");
 	}
 
-	public static void testEchoService(ApplicationContext context) {
+	public static void testEchoService(String config) {
+		ApplicationContext context = new XmlApplicationContext(
+				new ClassPathResource(config));
 		EchoService echoService = (EchoService) context.getBean("echoService");
 		System.out.println();
 		System.out.println(LINE_SEPARATOR);
