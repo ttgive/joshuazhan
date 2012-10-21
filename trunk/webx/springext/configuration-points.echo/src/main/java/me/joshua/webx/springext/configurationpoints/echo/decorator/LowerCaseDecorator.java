@@ -14,6 +14,12 @@ public class LowerCaseDecorator implements Decorator {
 		return message.toLowerCase();
 	}
 
+	/**
+	 * <pre>
+	 * 最简单的Decorator扩展实现，只继承了AbstractSingleBeanDefinitionParser并通过泛型参数传入类型定义。
+	 * 配置解析和Bean的生成都由父类完成。
+	 * </pre>
+	 */
 	public static class DefinitionParser extends
 			AbstractSingleBeanDefinitionParser<LowerCaseDecorator> {
 	}

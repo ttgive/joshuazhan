@@ -18,14 +18,14 @@ public class Launcher {
 	 */
 	public static void main(String[] args) {
 		// 配置1为使用自定义扩展元素的示例
-		testEchoService("configuration1.xml");
+		extendTest("configuration1.xml");
 		// 配置2为使用默认元素的示例
-		testEchoService("configuration2.xml");
+		extendTest("configuration2.xml");
 		// 配置3为在默认元素中引用Bean的示例
-		testEchoService("configuration3.xml");
+		extendTest("configuration3.xml");
 	}
 
-	public static void testEchoService(String config) {
+	public static void extendTest(String config) {
 		ApplicationContext context = new XmlApplicationContext(
 				new ClassPathResource(config));
 		EchoService echoService = (EchoService) context.getBean("echoService");
