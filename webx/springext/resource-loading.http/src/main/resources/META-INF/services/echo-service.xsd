@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	定义echo-service元素的格式
+	包括一个title子元素和preTitle， postTitle，separator三个属性，属性都是可选的，且提供了默认值
+ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xsd:element name="echo-service" type="EchoServiceType" />
+
+	<xsd:complexType name="EchoServiceType">
+		<xsd:all>
+			<xsd:element name="title" type="xsd:string" default="Echo" />
+		</xsd:all>
+		<xsd:attribute name="preTitle" type="xsd:string" default="[" />
+		<xsd:attribute name="postTitle" type="xsd:string" default="]" />
+		<xsd:attribute name="separator" type="xsd:string" default=":" />
+	</xsd:complexType>
+
+</xsd:schema>
