@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Logback Configuration. -->
-<configuration debug="false">
+<configuration debug="false" xmlns="http:/logback.qos.ch"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http:/logback.qos.ch logback.xsd">
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<target>System.out</target>
 		<filter class="com.alibaba.citrus.logconfig.logback.LevelRangeFilter">
