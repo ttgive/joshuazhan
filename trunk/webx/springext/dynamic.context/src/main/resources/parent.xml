@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:services="http://www.alibaba.com/schema/services"
+	xmlns:res-loaders="http://www.alibaba.com/schema/services/resource-loading/loaders"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.alibaba.com/schema/services http://localhost:8080/schema/services.xsd
+		http://www.alibaba.com/schema/services/resource-loading/loaders http://localhost:8080/schema/services-resource-loading-loaders.xsd
+		http://www.springframework.org/schema/beans http://localhost:8080/schema/www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/lang http://localhost:8080/schema/www.springframework.org/schema/lang/spring-lang.xsd">
+
+	<bean id="bracketDecorator"
+		class="me.joshua.webx.springext.demo.decorator.BracketDecoratorImpl" />
+	<bean id="upperCaseDecorator"
+		class="me.joshua.webx.springext.demo.decorator.UpperCaseDecoratorImpl" />
+
+	<lang:groovy id="engine" refresh-check-delay="2000"
+		init-method="init" script-source="/diamond/me.joshua/engine.groovy" />
+
+	<services:resource-loading xmlns="http://www.alibaba.com/schema/services">
+		<resource pattern="/diamond">
+			<res-loaders:diamond-loader />
+		</resource>
+	</services:resource-loading>
+</beans>
