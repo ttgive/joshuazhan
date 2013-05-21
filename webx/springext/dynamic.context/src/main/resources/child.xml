@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://localhost:8080/schema/www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/lang http://localhost:8080/schema/www.springframework.org/schema/lang/spring-lang.xsd">
+
+	<lang:groovy id="helloworld" refresh-check-delay="2000" script-source="/diamond/me.joshua/greeting1.groovy">
+        <lang:property name="title" value="Groovy" />
+        <lang:property name="message" value="Hello world!" />
+    </lang:groovy>
+    
+	<lang:groovy id="hellojoshua" refresh-check-delay="2000" script-source="/diamond/me.joshua/greeting2.groovy">
+        <lang:property name="title" value="Groovy" />
+        <lang:property name="message" value="Hello, Joshua!" />
+    </lang:groovy>
+    
+</beans>

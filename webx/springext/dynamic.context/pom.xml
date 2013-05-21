@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>me.joshua.webx.springext</groupId>
+	<artifactId>dynamic.context</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>Archetype - diamond-resource</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<java.version>1.6</java.version>
+		<java.encoding>UTF-8</java.encoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.alibaba.citrus</groupId>
+			<artifactId>citrus-webx-all</artifactId>
+			<version>3.1.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.12</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.taobao.diamond</groupId>
+			<artifactId>diamond-client</artifactId>
+			<version>3.5.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.alibaba.citrus.tool</groupId>
+				<artifactId>maven-springext-plugin</artifactId>
+				<version>1.0</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>
