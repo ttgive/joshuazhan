@@ -9,4 +9,6 @@
 
 	<context:component-scan base-package="me.joshua.spring.groovy.demo.service" />
 
+	<lang:groovy id="simple" refresh-check-delay="2000"
+		script-source="file:/home/joshua/workspace/projects/joshuazhan/spring/groovy.demo/src/main/java/me/joshua/spring/groovy/demo/script/Simple.groovy" />
 </beans>
