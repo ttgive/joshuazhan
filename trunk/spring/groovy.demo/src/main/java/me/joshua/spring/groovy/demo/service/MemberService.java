@@ -3,6 +3,8 @@ package me.joshua.spring.groovy.demo.service;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.PostConstruct;
+
 import me.joshua.spring.groovy.demo.model.Member;
 
 import org.springframework.stereotype.Service;
@@ -12,6 +14,7 @@ public class MemberService {
 
 	private Map<String, Member> memberMap;
 
+	@PostConstruct
 	public void init() {
 		memberMap = new HashMap<String, Member>();
 		Member member = new Member("joshua", "daonan.zhan@gmail.com");
